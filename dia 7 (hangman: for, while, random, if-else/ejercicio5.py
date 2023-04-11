@@ -29,8 +29,8 @@ while '_' in display:
 
     if guess not in chosen_word:
         #TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
-        lives -=1
-        print(f'the letter {guess} is not in the word, try again!')
+        lives -= 1
+        print(f"the letter {guess} is not in the word, you've lost a life, try again!")
 
     print(display)
     if '_' not in display:
@@ -38,5 +38,6 @@ while '_' in display:
     elif lives == 0:
         print("You've lost")
         break
-
+    
+    #TODO-2: - Import the stages from hangman_art.py and make this error go away.
     print(ha.stages[lives])
