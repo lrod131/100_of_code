@@ -1,3 +1,3 @@
 # 100_of_code
 
-En este repositorio guardaré mi progreso en el curo de 100 Days of code de Angela Yu.
+In this repository I'll be saving my projects and excercises from the 100 days of code from  Angela Yu's Udemy 100 days of code.
