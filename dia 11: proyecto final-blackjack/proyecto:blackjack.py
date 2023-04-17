@@ -148,12 +148,13 @@ def check_ace(card_list):
             card_list[index] = 1
     return card_list
 
-#evaluates if 
+#evaluates if the sum of cards is more than 21
 def evaluate_draw(sum_draw):
     if sum_draw > 21:
         return True
     return False
 
+#adds a new card to the computer hand if it's under 17
 def add_computer_cards(sum_draw, computer_hand):
     while sum_draw < 17:
         sum_draw = sum(computer_hand)
@@ -161,11 +162,12 @@ def add_computer_cards(sum_draw, computer_hand):
         computer_hand = check_ace(computer_hand)
     return computer_hand
 
+#sums the total of cards in a hand
 def sum_cards(card_list):
     hand_total = sum(card_list)
     return hand_total
 
-
+#draw a new card to a hand
 def draw_cards(deck,first_round):
     hand = []
     if first_round:
