@@ -1,3 +1,8 @@
+'''
+This file just have 3 variables containing the necessary data for the coffee
+app to work.
+'''
+
 MENU = {
     "espresso": {
         "ingredients": {
