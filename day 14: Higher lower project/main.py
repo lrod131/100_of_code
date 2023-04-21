@@ -47,7 +47,6 @@ def set_winner(user1_followers, user2_followers, option):
 
 
 while correct:
-    
     #set each user value and in case is the same on both it gets another one
     if score <= 0:
         user_a = 'Compare A: ' + get_data(data)
@@ -64,7 +63,6 @@ while correct:
     option = printing_options(user_a, vs, user_b).lower()
     #evaluate if the user won or not, if not the game ends
     win = set_winner(get_followers(user_a, data), get_followers(user_b, data), option)
-
     if win:
         score += 1
         os.system('clear')
