@@ -1,6 +1,8 @@
-#Create a class named employee and initialize it with an attribute named employee
-#create a method to change the default name
-#create a new object and user the employee attribute
+'''
+    Create a class named employee and initialize it with an attribute named employee
+    create a method to change the default name
+    create a new object and user the employee attribute
+'''
 
 
 class Employee:
