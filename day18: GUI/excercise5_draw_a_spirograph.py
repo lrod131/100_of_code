@@ -2,9 +2,15 @@
     draw a spirograph using circles of 100 in radious
 '''
 
+from turtle import Screen
+
 from timmy_custom import NewTurtle
 
 timmy = NewTurtle()
-timmy.circle(100)
+timmy.pensize(3)
+timmy.speed('fastest')
 
-timmy.set_line_color_rgb()
+draw_circle(10)
+
+screen = Screen()
+screen.exitonclick()

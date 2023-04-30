@@ -25,10 +25,17 @@ class NewTurtle(t.Turtle):
         rgb = []
         for _ in range(3):
             rgb.append(random.randint(0, 255))
-        color = tuple(rgb)
-        print(color)
+        line_color = tuple(rgb)
+        self.pencolor(line_color)
 
     def random_walk(self):
         angles = [0, 90, 180, 270]
         self.setheading(random.choice(angles))
         self.fd(random.randint(10, 15) * 2)
+
+    def draw_circle(self, angle):
+        for _ in range(int(360/angle)):
+            self.circle(100)
+            self.set_line_color_rgb()
+            heading = self.heading()
+            self.setheading(heading + angle)
