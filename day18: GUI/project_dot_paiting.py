@@ -24,7 +24,7 @@ from timmy_custom import NewTurtle
 
 tim = NewTurtle()
 tim.speed(9)
-
+tim.hideturtle()
 
 
 def draw_spot_painting(size):
