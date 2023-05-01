@@ -39,12 +39,16 @@ while is_race_on:
     for turtle_name, turtle_object in turtles_dic.items():
         if turtle_object.xcor() > 230:
             is_race_on = False
+            turtle_result = Turtle()
+            turtle_result.penup()
+            turtle_result.hideturtle()
             winning_color = turtle_object.pencolor()
             if user_bet == winning_color:
-                print(f"You've won! {winning_color} turtle is the winner")
+                turtle_result.write("You've won!", align="center", font=("Arial", 20, "bold"))
             else:
-                print(f"You've lost, {winning_color} turtle is the winner")
-        random_distance = randint(0, 10)
+                turtle_result.write(f"You've lost, {winning_color} turtle is the winner", align="center", font=("Arial", 20, "bold"))
+        random_distance = randint(0, 10)                    
         turtle_object.fd(random_distance)
+
 
 screen.exitonclick()
