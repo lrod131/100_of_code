@@ -16,7 +16,8 @@ class Snake():
     def create_snakes(self):
         x_position = 0
         for _ in range(3):
-            self.add_segment(x_position)
+            position = (x_position, 0)
+            self.add_segment(position)
             x_position -= 20
 
     def add_segment(self, position):
@@ -24,7 +25,7 @@ class Snake():
         snake_portion.penup()
         snake_portion.shape('square')
         snake_portion.color('white')
-        snake_portion.goto(position, 0)
+        snake_portion.goto(position)
         self.segments.append(snake_portion)
 
     def extend_snake(self):

@@ -1,3 +1,7 @@
+'''
+    Snake game using OOP, lists, dictionaries and GUI with the turtle library
+'''
+
 import time
 from turtle import Screen
 
@@ -25,7 +29,6 @@ screen.onkey(key='Right', fun=game.move_right)
 
 # Keep looping the snake's movement
 while game_is_on:
-    game.ver_elementos()
     screen.update()
     time.sleep(0.1)
     game.move_snake()
@@ -41,6 +44,12 @@ while game_is_on:
        game.head.ycor() > 280 or game.head.ycor() < -280:
         game_is_on = False
         score.game_over()
+
+    # Detect collision with tail
+    for segment in game.segments[1:]:
+        if game.head.distance(segment) < 10:
+            game_is_on = False
+            score.game_over()
 
 
 # Exiting on click
